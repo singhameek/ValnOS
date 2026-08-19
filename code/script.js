@@ -110,19 +110,6 @@ function deselectIcon(element){
 
 
 
-
-
-var browserScreen = document.querySelector("#browser")
-function closeWindow(element){
-    element.style.display = "none"
-  }
-var browserScreenClose = document.querySelector("#browserClose")
-function openWindow(element) {
-    element.style.display = "block"
-}
-browserScreenClose.addEventListener("click",function(){closeWindow(browserScreen) }) ;
-
-
 function handleIconTap(element, targetWindow){
   if (element.classList.contains("selected")){
     deselectIcon(element)
@@ -160,9 +147,53 @@ addWindowTapHandling(document.getElementById("browser"));
 
 function initializeWindow(elementName){
   var screen = document.querySelector("#" + elementName);
+  var icon = document.querySelector("#" + elementName + "Icon");
+  var closeButton = document.querySelector("#" + elementName + "Close");
+
+  icon.addEventListener("click", function(){
+    handleIconTap(icon, screen);
+  });
+  closeButton.addEventListener("click", function(){
+    closeWindow(screen);
+  });
+
   addWindowTapHandling(screen);
-  makeClosable(elementName);
   dragElement(screen);
 }
 
 initializeWindow("browser")
+initializeWindow("calc")
+initializeWindow("welcome")
+
+
+var calcExpression = "";
+
+function calcInput(value){
+    calcExpression += value;
+    document.getElementById("calcDisplay").value = calcExpression;
+}
+
+function calcClear(){
+    calcExpression = "";
+    document.getElementById("calcDisplay").value = "";
+}
+
+function calcBackspace(){
+    calcExpression = calcExpression.slice(0, -1);
+    document.getElementById("calcDisplay").value = calcExpression;
+}
+
+function calcEquals(){
+    try {
+        // only allow digits, operators, decimal points, and spaces — blocks arbitrary code
+        if (!/^[0-9+\-*/.\s]+$/.test(calcExpression)) {
+            throw new Error("invalid input");
+        }
+        var result = Function('"use strict"; return (' + calcExpression + ')')();
+        calcExpression = String(result);
+        document.getElementById("calcDisplay").value = calcExpression;
+    } catch (e) {
+        document.getElementById("calcDisplay").value = "Error";
+        calcExpression = "";
+    }
+}

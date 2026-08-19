@@ -43,3 +43,24 @@
     color: antiquewhite;
     text-align: center;
 }
+
+.calcBtn{
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.15);
+    color: antiquewhite;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calcBtn:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+#calc{
+    width: 300px !important;
+}
+
+#calc > div{
+    width: 100%;
+}

@@ -24,9 +24,13 @@
 
         <!--apps-->
         <div id="desktopApps" style="padding-top: 96px; padding-left: 16px;">
-            <div style="text-align: center; padding: 8px; width: fit-content" id="browserIcon" onclick="handleIconTap(this, browserScreen)">
+            <div style="text-align: center; padding: 8px; width: fit-content" id="browserIcon">
                 <img src="browser.png" style="width: 64px; height:64px; border-radius: 48px">
                 <p class="text">Web Browser</p>
+            </div>    
+            <div style="text-align: center; padding: 8px; width: fit-content" id="calcIcon">
+                <img src="calc.png" style="width: 64px; height:64px; border-radius: 48px">
+                <p class="text">Calculator</p>
             </div>    
         </div>
         <!--Browser-->
@@ -36,6 +40,40 @@
             <a class="text" href="https://google.com" style="position: absolute; top: 50px"> Open Search </a>
             <p id="browserClose" class="closebutton">X</p>
         </div> 
+
+        <!--Calculator-->
+        <div id="calc" class="window" style="width: 220px; display:none;">
+    <p id="calcheader" class="windowheader">[====]</p>
+    <input type="text" id="calcDisplay" readonly
+        style="width: 100%; box-sizing: border-box; text-align: right; font-size: 20px; padding: 8px; margin-bottom: 8px; border-radius: 8px; border: none;">
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;">
+        <button class="calcBtn" onclick="calcClear()">C</button>
+        <button class="calcBtn" onclick="calcInput('/')">÷</button>
+        <button class="calcBtn" onclick="calcInput('*')">×</button>
+        <button class="calcBtn" onclick="calcBackspace()">⌫</button>
+
+        <button class="calcBtn" onclick="calcInput('7')">7</button>
+        <button class="calcBtn" onclick="calcInput('8')">8</button>
+        <button class="calcBtn" onclick="calcInput('9')">9</button>
+        <button class="calcBtn" onclick="calcInput('-')">−</button>
+
+        <button class="calcBtn" onclick="calcInput('4')">4</button>
+        <button class="calcBtn" onclick="calcInput('5')">5</button>
+        <button class="calcBtn" onclick="calcInput('6')">6</button>
+        <button class="calcBtn" onclick="calcInput('+')">+</button>
+
+        <button class="calcBtn" onclick="calcInput('1')">1</button>
+        <button class="calcBtn" onclick="calcInput('2')">2</button>
+        <button class="calcBtn" onclick="calcInput('3')">3</button>
+        <button class="calcBtn" onclick="calcEquals()" style="grid-row: span 2;">=</button>
+
+        <button class="calcBtn" onclick="calcInput('0')" style="grid-column: span 2;">0</button>
+        <button class="calcBtn" onclick="calcInput('.')">.</button>
+    </div>
+
+    <p id="calcClose" class="closebutton">X</p>
+</div>
 
         <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css" />
