@@ -4,30 +4,26 @@
 
 
     <body style="background-image: url(wp.jpg); background-size: cover; height: 100vh;">
+        
+        <!--welcome window-->
         <div style="position: absolute ; top: 50%; left: 50%;
-        transform: translate(-50%, -50%); border: solid; border-width: 2px; border-radius: 16px; border-color: white; width: fit-content; padding: 16px; background-color: aquamarine;">
+        transform: translate(-50%, -50%); border: solid; border-width: 2px; border-radius: 16px; border-color: white; width: fit-content; padding: 16px; background-color: black;" id="welcome">
             <h1 style="color: white; text-align: center;">Welcome to ValnOS!</h1>
             <p style="color:white; text-align: center;">This is my WebOS<br>Have fun and look around!</p>
+            <p style="cursor: pointer; position: absolute; top: 50%+15px; left: 50%+15px; color: antiquewhite;" id="welcomeClose">X</p>
+            <p id="welcomeheader" style="user-select: none; cursor: grab; color: antiquewhite; font-size: xx-small;">Drag me to move window</p>
         </div>    
 
 
-
+        <!--top bar-->
         <div
         style="display: flex; justify-content: space-between; position: absolute; width: 100%; backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.25); color: antiquewhite">
-            <p style=" margin-left: 16px;">ValnOS</p>
+            <p style=" margin-left: 16px; cursor: pointer;" id="welcomeopen">ValnOS</p>
             <p style=" margin-right: 16px;" id="clock">Loading time...</p>
+            <p style="margin-right: 16px;" id="date">date</p>
         </div>
-            <script>
-        function updateClock() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString();
-            document.getElementById('clock').textContent = timeString;
 
-        }
-        updateClock();
-        setInterval(updateClock, 1)
-        </script>
-
+        <script src="script.js"></script>
     </body>
 
 
