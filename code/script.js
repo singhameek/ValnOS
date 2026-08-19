@@ -163,8 +163,7 @@ function initializeWindow(elementName){
 
 initializeWindow("browser")
 initializeWindow("calc")
-initializeWindow("welcome")
-
+initializeWindow("notes")
 
 var calcExpression = "";
 
@@ -197,3 +196,13 @@ function calcEquals(){
         calcExpression = "";
     }
 }
+
+var notesArea = document.getElementById("notesArea");
+var savedNotes = localStorage.getItem("valnosNotes");
+if (savedNotes) {
+    notesArea.value = savedNotes;
+}
+notesArea.addEventListener("input", function(){
+    localStorage.setItem("valnosNotes", notesArea.value);
+});
+

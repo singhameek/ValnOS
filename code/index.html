@@ -31,6 +31,10 @@
             <div style="text-align: center; padding: 8px; width: fit-content" id="calcIcon">
                 <img src="calc.png" style="width: 64px; height:64px; border-radius: 48px">
                 <p class="text">Calculator</p>
+            </div>
+            <div style="text-align: center; padding: 8px; width: fit-content" id="notesIcon">
+                <img src="notes.png" style="width: 64px; height:64px; border-radius: 48px">
+                <p class="text">Notes</p>
             </div>    
         </div>
         <!--Browser-->
@@ -73,6 +77,14 @@
     </div>
 
     <p id="calcClose" class="closebutton">X</p>
+</div>
+
+    <!--Notes-->
+<div id="notes" class="window" style="width:220px; display:none;">
+    <p id="notesheader" class="windowheader">[====]</p>
+    <textarea id="notesArea" placeholder="Type your notes here..."
+        style="width: 100%; box-sizing: border-box; height: 150px; resize: none; border-radius: 8px; border: none; padding: 8px; font-family: inherit; background-color: rgba(255,255,255,0.9);"></textarea>
+    <p id="notesClose" class="closebutton">X</p>
 </div>
 
         <script src="script.js"></script>
