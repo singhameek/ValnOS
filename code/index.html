@@ -16,7 +16,7 @@
 
         <!--top bar-->
         <div
-        style="display: flex; justify-content: space-between; position: absolute; width: 100%; backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.25); color: antiquewhite">
+        style="display: flex; justify-content: space-between; position: absolute; width: 100%; backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.25); color: antiquewhite" id="top">
             <p style=" margin-left: 16px; cursor: pointer;" id="welcomeopen">ValnOS</p>
             <p style=" margin-right: 16px;" id="clock">Loading time...</p>
             <p style="margin-right: 16px;" id="date">date</p>
@@ -29,11 +29,12 @@
                 <p class="text">Web Browser</p>
             </div>    
         </div>
-
-        <div id="browser" class="window">
-            <p id="browserClose" class="closebutton">X</p>
+        <!--Browser-->
+        <div id="browser" class="window" style="width:120px">
             <p id="browserheader" class="windowheader">[====]</p>
-            <a class="text" href="https://google.com"> Open Search </a>
+            <p style="color: rgba 0,0,0,1;">e<br>e</p>
+            <a class="text" href="https://google.com" style="position: absolute; top: 50px"> Open Search </a>
+            <p id="browserClose" class="closebutton">X</p>
         </div> 
 
         <script src="script.js"></script>

@@ -133,13 +133,36 @@ function handleIconTap(element, targetWindow){
 }
 // move selected window to top
 var biggestIndex = 1;
+var topBar = document.querySelector("#top");
 
 function addWindowTapHandling(element){
-  element.addEventListener("mousedown",
-    handleWindowTap(element))
+  element.addEventListener("mousedown", function() {
+    handleWindowTap(element);
+  });
 }
 
 function handleWindowTap(element){
-  biggestIndex++
-  element.style.zIndez = biggestIndex
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+  deselectIcon(selectedIcon);
 }
+
+function openWindow(element){
+  element.style.display = "flex";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex
+  topBar.style.zIndex = biggestIndex + 1
+}
+
+addWindowTapHandling(document.getElementById("welcome"));
+addWindowTapHandling(document.getElementById("browser"));
+
+function initializeWindow(elementName){
+  var screen = document.querySelector("#" + elementName);
+  addWindowTapHandling(screen);
+  makeClosable(elementName);
+  dragElement(screen);
+}
+
+initializeWindow("browser")
