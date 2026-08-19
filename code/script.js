@@ -77,19 +77,19 @@ function dragElement(element) {
 
 
 
-var WelcomeScreenClose = document.querySelector(#welcomeclose)
+var WelcomeScreenClose = document.querySelector("#welcomeclose")
 function closeWindow(element){
     element.style.display = "none"
 }
-var WelcomeScreenOpen = document.querySelector(#welcomeopen)
+var WelcomeScreenOpen = document.querySelector("#welcomeopen")
 function openWindow(element) {
     element.style.display = "block"
 }
 
 WelcomeScreenClose.addEventListener("click", function() {
-  closeWindow(welcomeScreen);
+  closeWindow(welcome);
 });
 
 WelcomeScreenOpen.addEventListener("click", function(){
-  openWindow(welcomeScreen);
+  openWindow(welcome);
 });
