@@ -6,11 +6,11 @@
     <body style="background-image: url(wp.jpg); background-size: cover; height: 100vh;">
         
         <!--welcome window-->
-        <div id="welcome" class="window">
-            <h1 style="color: white; text-align: center;">Welcome to ValnOS!</h1>
-            <p style="color:white; text-align: center;">This is my WebOS<br>Have fun and look around!</p>
-            <p id="welcomeclose" class="closebutton">X</p>
+        <div id="welcome" class="window" style="display: block;">
             <p id="welcomeheader" class="windowheader">[====]</p>
+            <h1 style="text-align: center;" class="text">Welcome to ValnOS!</h1>
+            <p style= "text-align: center;" class="text">This is my WebOS<br>Use the Header([===]) to drag the window, and press X to close it<br>Have fun and look around!</p>
+            <p id="welcomeclose" class="closebutton">X</p>
         </div>    
 
 
@@ -23,9 +23,18 @@
         </div>
 
         <!--apps-->
-        <div id="desktopApps" style="padding-top: 32px; padding-left: 16px;">
-            <p>Web Browser</p>
+        <div id="desktopApps" style="padding-top: 96px; padding-left: 16px;">
+            <div style="text-align: center; padding: 8px; width: fit-content" id="browserIcon" onclick="handleIconTap(this, browserScreen)">
+                <img src="browser.png" style="width: 64px; height:64px; border-radius: 48px">
+                <p class="text">Web Browser</p>
+            </div>    
         </div>
+
+        <div id="browser" class="window">
+            <p id="browserClose" class="closebutton">X</p>
+            <p id="browserheader" class="windowheader">[====]</p>
+            <a class="text" href="https://google.com"> Open Search </a>
+        </div> 
 
         <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css" />

@@ -22,6 +22,7 @@ setInterval(updateDate, 1000)
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+dragElement(document.querySelector("#browser"))
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -93,3 +94,52 @@ WelcomeScreenClose.addEventListener("click", function() {
 WelcomeScreenOpen.addEventListener("click", function(){
   openWindow(welcome);
 });
+
+
+var selectedIcon = undefined
+
+function selectIcon(element){
+  element.classList.add("selected")
+  selectedIcon = element
+}
+
+function deselectIcon(element){
+  element.classList.remove("selected")
+  selectedIcon = undefined
+}
+
+
+
+
+
+var browserScreen = document.querySelector("#browser")
+function closeWindow(element){
+    element.style.display = "none"
+  }
+var browserScreenClose = document.querySelector("#browserClose")
+function openWindow(element) {
+    element.style.display = "block"
+}
+browserScreenClose.addEventListener("click",function(){closeWindow(browserScreen) }) ;
+
+
+function handleIconTap(element, targetWindow){
+  if (element.classList.contains("selected")){
+    deselectIcon(element)
+  } else {
+    selectIcon(element)
+    openWindow(targetWindow)
+  }
+}
+// move selected window to top
+var biggestIndex = 1;
+
+function addWindowTapHandling(element){
+  element.addEventListener("mousedown",
+    handleWindowTap(element))
+}
+
+function handleWindowTap(element){
+  biggestIndex++
+  element.style.zIndez = biggestIndex
+}

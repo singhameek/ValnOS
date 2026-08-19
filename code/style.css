@@ -20,15 +20,25 @@
     border-color: white;
     width: fit-content;
     padding: 16px;
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.5);
+    display: none;
 }
 
 .windowheader{
     user-select: none;
     cursor: grab;
-    position: absolute;
-    top: 0px;
-    left: 150px;
+    text-align: center;
     font-size: small;
     color: white;
+}
+
+
+.selected{
+    border-radius: 64px;
+    background-color: rgba(0,0,0,1);
+}
+
+
+.text{
+    color: antiquewhite;
 }
