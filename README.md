@@ -4,10 +4,10 @@ ValnOS is a web based desktop OS, built in HTML, CSS, and JavaScript. There are 
 
 
 Features:
--Draggable and closable windows
--Auto-focus between multiple windows
--Live top bar with time and date that pulls the information from the device running the webOS
--Desktop Icons
+- Draggable and closable windows
+- Auto-focus between multiple windows
+- Live top bar with time and date that pulls the information from the device running the webOS
+- Desktop Icons
 
 Extra feature beyond guide: date implementation
 
