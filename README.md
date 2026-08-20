@@ -1,5 +1,5 @@
-ValnOS is a web based desktop OS, built in HTML, CSS, and Java. There are 3 apps: A calculator, notes, and web browser.
-image.png
+ValnOS is a web based desktop OS, built in HTML, CSS, and JavaScript. There are 3 apps: A calculator, notes, and web browser.
+(image.png)
 
 
 Features:
