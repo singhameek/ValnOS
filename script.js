@@ -206,3 +206,13 @@ notesArea.addEventListener("input", function(){
     localStorage.setItem("valnosNotes", notesArea.value);
 });
 
+const search = document.getElementById('search')
+
+search.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    const query = search.value.trim();
+    if  (query != '');
+      window.location.href=`https://google.com/search?q=${encodeURIComponent(query)}`
+
+  }
+});
