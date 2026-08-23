@@ -81,6 +81,16 @@ function dragElement(element) {
 var WelcomeScreenClose = document.querySelector("#welcomeclose")
 function closeWindow(element){
     element.style.display = "none"
+    element.classList.add("minimized");
+    setTimeout(function(){
+      if (element.classList.contains("minimized")) {
+        element.style.display = "none";
+      }
+    }, 200);
+
+    if (selectedIcon) {
+      deselectIcon(selectedIcon);
+    }
 }
 var WelcomeScreenOpen = document.querySelector("#welcomeopen")
 function openWindow(element) {
@@ -137,6 +147,9 @@ function handleWindowTap(element){
 
 function openWindow(element){
   element.style.display = "flex";
+  setTimeout(function() {
+    element.classList.remove("minimized");
+  }, 10);
   biggestIndex++;
   element.style.zIndex = biggestIndex
   topBar.style.zIndex = biggestIndex + 1
