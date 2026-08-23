@@ -178,6 +178,7 @@ initializeWindow("browser")
 initializeWindow("calc")
 initializeWindow("notes")
 initializeWindow("music")
+initializeWindow("settings")
 
 var calcExpression = "";
 
@@ -250,3 +251,10 @@ document.addEventListener("click", function(event){
 document.addEventListener("keydown", function(event){
   playUISound();
 });
+
+
+function changeWallpaper(imagePath) {
+  document.body.style.backgroundImage = "url('"+imagePath +"')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+} 

@@ -45,7 +45,11 @@
             <div style="text-align: center; padding: 8px; width: fit-content" id="musicIcon">
                 <img src="music.png" style="width: 64px; height:64px; border-radius: 48px">
                 <p class="text">Music</p>
-            </div>     
+            </div>
+            <div style="text-align: center; padding: 8px; width: fit-content" id="settingsIcon">
+                <img src="settings.png" style="width: 64px; height:64px; border-radius: 48px">
+                <p class="text">Settings</p>
+            </div>
         </div>
         </div>
         <!--Browser-->
@@ -107,6 +111,17 @@
             <iframe src="https://monochrome.samidy.com" allow="autoplay; encrypted-media; fullscreen"></iframe>
             <p id="musicClose" class="closebutton">X</p>
         </div>
+<!--Settings-->
+<div id="settings" class="window" style="display:none;">
+    <p id="settingsheader" class="windowheader">[====]</p>
+    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <p class="text" style="margin: 0 0 8px 0;">Choose Wallpaper</p>
+        <button onclick="changeWallpaper('wp.jpg')" style="padding: 10px; background: #222; color: white; border: 1px solid #555; border-radius: 6px; cursor: pointer; font-family: inherit;">F1</button>
+        <button onclick="changeWallpaper('bg27.jpg')" style="padding: 10px; background: #222; color: white; border: 1px solid #555; border-radius: 6px; cursor: pointer; font-family: inherit;">Windows</button>
+        <button onclick="changeWallpaper('bg29.jpg')" style="padding: 10px; background: #222; color: white; border: 1px solid #555; border-radius: 6px; cursor: pointer; font-family: inherit;">Futuristic</button>
+    </div>
+    <p id="settingsClose" class="closebutton">X</p>
+</div>
 
         <script src="script.js"></script>
     </body>
