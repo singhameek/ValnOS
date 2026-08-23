@@ -21,7 +21,9 @@
     width: fit-content;
     padding: 16px;
     background-color: rgba(0,0,0,0.5);
-    display: none;
+    display: none, flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .windowheader{
@@ -77,6 +79,7 @@
     justify-content: space-evenly;
     height: 110px;
     padding: 2px;
+    cursor: pointer;
 }
 
 .topbar{
@@ -89,4 +92,11 @@
     color: antiquewhite;
     border-radius: 32px;
     margin: 4px;
+}
+
+.window iframe{
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    border: none;
 }

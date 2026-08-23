@@ -164,6 +164,7 @@ function initializeWindow(elementName){
 initializeWindow("browser")
 initializeWindow("calc")
 initializeWindow("notes")
+initializeWindow("music")
 
 var calcExpression = "";
 
