@@ -217,3 +217,23 @@ search.addEventListener('keydown', function(event) {
 
   }
 });
+
+
+function playUISound() {
+  const sound = document.getElementById("uiSound")
+
+  if(sound) {
+    sound.currentTime = 0;
+    sound.play().catch(function(error){
+      console.log("Audio waiting for user interact")
+    });
+  }
+}
+
+document.addEventListener("click", function(event){
+  playUISound();
+});
+
+document.addEventListener("keydown", function(event){
+  playUISound();
+});
