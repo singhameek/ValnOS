@@ -18,15 +18,16 @@
 
 
         <!--top bar-->
-        <div
-        style="display: flex; justify-content: space-between; position: absolute; width: 100%; backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.25); color: antiquewhite" id="top">
+        <div style="justify-content: center;">
+        <div id="top" class="topbar">
             <p style=" margin-left: 16px; cursor: pointer;" id="welcomeopen">ValnOS</p>
             <p style=" margin-right: 16px;" id="clock">Loading time...</p>
             <p style="margin-right: 16px;" id="date">date</p>
         </div>
+        </div>
 
         <!--apps-->
-        <div id="desktopApps" style="padding-top: 96px; padding-left: 16px;">
+        <div id="desktopApps" class="appsbar">
             <div style="text-align: center; padding: 8px; width: fit-content" id="browserIcon">
                 <img src="browser.png" style="width: 64px; height:64px; border-radius: 48px">
                 <p class="text">Web Browser</p>
@@ -82,7 +83,7 @@
     </div>
 
     <p id="calcClose" class="closebutton">X</p>
-</div>
+        </div>
 
     <!--Notes-->
 <div id="notes" class="window" style="width:300px; display:none;">
