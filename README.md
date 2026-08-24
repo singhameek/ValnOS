@@ -16,6 +16,7 @@ Features:
 - Audio feedback on user input
 - Animation on window open/close
 - Ability to change wallpaper
+- Added a game
 
 Extra feature beyond guide: date implementation (WebOS 1, Ship #1)
 Extra features beyond WebOS 1: Music app, taskbar, audio feedback, window animations, settings app, ability to change wallpaper
