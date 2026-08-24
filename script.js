@@ -179,6 +179,7 @@ initializeWindow("calc")
 initializeWindow("notes")
 initializeWindow("music")
 initializeWindow("settings")
+initializeWindow("game")
 
 var calcExpression = "";
 

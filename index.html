@@ -50,6 +50,10 @@
                 <img src="settings.png" style="width: 64px; height:64px; border-radius: 48px">
                 <p class="text">Settings</p>
             </div>
+            <div style="text-align: center; padding: 8px; width: fit-content" id="gameIcon">
+                <img src="game.png" style="width: 64px; height:64px; border-radius: 48px">
+                <p class="text">Game</p>
+            </div>
         </div>
         </div>
         <!--Browser-->
@@ -122,6 +126,14 @@
     </div>
     <p id="settingsClose" class="closebutton">X</p>
 </div>
+
+<!--Game-->
+<div id="game" class="window" style="padding: 6px; margin-bottom: 24px; height: 540px; width: 960px;">
+    <p id="gameheader" class="windowheader">[====]</p>
+    <iframe src="https://driver-guessing-game.vercel.app" allow="autoplay; encrypted-media; fullscreen"></iframe>
+    <p id="gameClose" class="closebutton">X</p>
+</div>
+
 
         <script src="script.js"></script>
     </body>
